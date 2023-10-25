@@ -50,7 +50,7 @@ type ConsumeResponse struct {
 
 // END:types
 
-// START:produce
+// Write record to the end of the log
 func (s *httpServer) handleProduce(w http.ResponseWriter, r *http.Request) {
 	var req ProduceRequest
 	err := json.NewDecoder(r.Body).Decode(&req)
@@ -71,9 +71,7 @@ func (s *httpServer) handleProduce(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-// END:produce
-
-// START:consume
+// Read log record at given offset
 func (s *httpServer) handleConsume(w http.ResponseWriter, r *http.Request) {
 	var req ConsumeRequest
 	err := json.NewDecoder(r.Body).Decode(&req)
@@ -97,5 +95,3 @@ func (s *httpServer) handleConsume(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 }
-
-// END:consume
