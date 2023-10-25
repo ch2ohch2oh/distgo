@@ -1,7 +1,7 @@
 // START:types
 syntax = "proto3";
 
-package log.v1;
+package log.v1;   // Specify package name for the generated go code
 
 option go_package = "github.com/travisjeffery/api/log_v1";
 

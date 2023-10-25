@@ -1,4 +1,5 @@
-// START:twitter
+// sudo apt install protobuf-compiler 
+// protoc --version
 syntax = "proto3";
 
 package twitter;
@@ -6,7 +7,6 @@ package twitter;
 message Tweet {
   string message = 1;
 }
-// END:twitter
 
 // START:setter
 syntax = "proto3";
